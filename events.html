@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechNova 2026 | Events</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body data-page="events">
+  <header class="sitehead">
+    <div class="brand">
+      <h1>TechNova 2026</h1>
+      <p>Innovation Code Creativity</p>
+    </div>
+
+    <nav class="navbar">
+      <a href="index.html" class="navlink">Home</a>
+      <a href="events.html" class="navlink active">Events</a>
+      <a href="feedback.html" class="navlink">Feedback</a>
+    </nav>
+  </header>
+
+  <main class="contentwrap">
+    <section class="event-image-section">
+
+        <img src="images/events.png"
+             alt="TechNova Events"
+             class="event-main-image">
+
+      </section>
+    <section class="page-heading">
+      <h2>Event details and student registration</h2>
+      <p>Browse the events below and register using valid student details</p>
+    </section>
+
+    <section class="card">
+      <div class="section-top">
+        <h3>Fest Events</h3>
+        <div class="stat-pill">Total Registrations: <span id="registrationCount">0</span></div>
+      </div>
+      <div id="eventsContainer" class="events-grid"></div>
+    </section>
+
+    <section class="card form-card">
+      <h3>Student Registration Form</h3>
+
+      <form id="registrationForm" novalidate>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="studentName">Student Name</label>
+            <input type="text" id="studentName" placeholder="Enter your name" />
+            <small class="error" id="studentNameError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="studentEmail">Email</label>
+            <input type="email" id="studentEmail" placeholder="Enter your email" />
+            <small class="error" id="studentEmailError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="mobileNumber">Mobile Number</label>
+            <input type="text" id="mobileNumber" placeholder="10-digit mobile number" maxlength="10" />
+            <small class="error" id="mobileNumberError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="registerNumber">Register Number</label>
+            <input type="text" id="registerNumber" placeholder="Example: TN2026-101" />
+            <small class="hint">Use letters, numbers, or hyphen only.</small>
+            <small class="error" id="registerNumberError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="eventSelect">Select Event</label>
+            <select id="eventSelect">
+              <option value="">Choose event</option>
+            </select>
+            <small class="error" id="eventSelectError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="participationType">Participation Type</label>
+            <select id="participationType">
+              <option value="">Select type</option>
+              <option value="Solo">Solo</option>
+              <option value="Team">Team</option>
+            </select>
+            <small class="error" id="participationTypeError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="teamName">Team Name</label>
+            <input type="text" id="teamName" placeholder="Required for team events" />
+            <small class="error" id="teamNameError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="teamSize">Team Size</label>
+            <input type="number" id="teamSize" lowest="2" maximum="4" placeholder="2 to 4 members" />
+            <small class="error" id="teamSizeError"></small>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Register</button>
+          <button type="reset" class="btn btn-secondary">Clear Form</button>
+        </div>
+      </form>
+
+      <div id="registrationMessage" class="message-box" aria-live="polite"></div>
+    </section>
+
+    <section class="card">
+      <h3>Registered Participant Details</h3>
+      <div id="registrationList" class="registration-list empty-state">
+        No participants registered yet.
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Contact: technova2026@college.edu | +91 9999999999</p>
+    <p>&copy; 2026 TechNova Fest</p>
+  </footer>
+</body>
+</html>

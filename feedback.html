@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechNova 2026 | Feedback</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body data-page="feedback">
+  <header class="sitehead">
+    <div class="brand">
+      <h1>TechNova 2026</h1>
+      <p>Innovation Code Creativity</p>
+    </div>
+
+    <nav class="navbar">
+      <a href="index.html" class="navlink">Home</a>
+      <a href="events.html" class="navlink">Events</a>
+      <a href="feedback.html" class="navlink active">Feedback</a>
+    </nav>
+  </header>
+
+  <main class="contentwrap">
+    <section class="page-heading">
+      <h2>Participant Feedback</h2>
+      <p>Share your experience and help us improve future events.</p>
+    </section>
+
+    <section class="card form-card">
+      <h3>Feedback Form</h3>
+
+      <form id="feedbackForm" novalidate>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="feedbackName">Student Name</label>
+            <input type="text" id="feedbackName" placeholder="Enter your name" />
+            <small class="error" id="feedbackNameError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="feedbackRegisterNumber">Register Number</label>
+            <input type="text" id="feedbackRegisterNumber" placeholder="Example: TN2026-101" />
+            <small class="error" id="feedbackRegisterNumberError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="eventAttended">Event Attended</label>
+            <select id="eventAttended">
+              <option value="">-- Choose event --</option>
+            </select>
+            <small class="error" id="eventAttendedError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="rating">Rating</label>
+            <select id="rating">
+              <option value="">-- Select rating --</option>
+              <option value="1">1 - Poor</option>
+              <option value="2">2 - Fair</option>
+              <option value="3">3 - Good</option>
+              <option value="4">4 - Very Good</option>
+              <option value="5">5 - Excellent</option>
+            </select>
+            <small class="error" id="ratingError"></small>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="comments">Comments</label>
+            <textarea id="comments" rows="5" placeholder="Write at least 20 characters..."></textarea>
+            <small class="error" id="commentsError"></small>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Submit Feedback</button>
+          <button type="reset" class="btn btn-secondary">Clear Form</button>
+        </div>
+      </form>
+
+      <div id="feedbackMessage" class="message-box" aria-live="polite"></div>
+    </section>
+
+    <section class="grid-2">
+      <div class="card">
+        <h3>Feedback Summary</h3>
+        <div id="feedbackSummary" class="summary-box empty-state">
+          No feedback submitted yet.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Average Rating</h3>
+        <div class="avg-rating">
+          <span id="averageRating">0.0</span>
+          <small>/ 5</small>
+        </div>
+        <p class="small-text">Calculated from all submitted feedback entries in this session.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Recent Feedback Entries</h3>
+      <div id="feedbackList" class="registration-list empty-state">
+        No feedback records yet.
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Contact: technova2026@college.edu | +91 98765 43210</p>
+    <p>&copy; 2026 TechNova College Fest</p>
+  </footer>
+</body>
+</html>

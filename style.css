@@ -78,7 +78,7 @@
 
     background:
     linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-    url("images/banner.jpg.png");
+    url("banner.jpg.png");
 
     background-position:center;
     background-size:contain;
